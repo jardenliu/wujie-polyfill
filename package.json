@@ -1,0 +1,12 @@
+{
+  "name": "wujie-polyfill",
+  "version": "1.0.0",
+  "description": "极致的微前端框架的polyfill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "jardenliu",
+  "license": "MIT"
+}
