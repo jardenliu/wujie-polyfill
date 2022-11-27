@@ -4,12 +4,16 @@
   "description": "极致的微前端框架的polyfill",
   "main": "index.js",
   "scripts": {
+    "build": "rollup -c ./rollup.config.ts --configPlugin typescript",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "jardenliu",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-typescript": "^9.0.2",
+    "rollup": "^3.5.0",
+    "tslib": "^2.4.1",
     "typescript": "^4.9.3"
   }
 }
