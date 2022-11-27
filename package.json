@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "jardenliu",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
 }
