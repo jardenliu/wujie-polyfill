@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "ESNext",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "allowJs": false,
+        "importHelpers": true,
+        "experimentalDecorators": true,
+        "jsx": "react",
+        "baseUrl": "./src",
+        "lib": ["DOM","ES2016","ES2015","ES2017","ES2018"]
+    }
+}
