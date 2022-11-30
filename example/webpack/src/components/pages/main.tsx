@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
+import Wujie from 'wujie-react'
 
 export default function App () {
-    const [msg, setMsg] = useState('Hello World')
 
-    const handleClick = (e) => {
-        setMsg(`now ${Date.now()}`)
-        console.log(e)
-    }
-
-    return (<button onClick={handleClick}>{msg}</button>)
+    return (<Wujie width={'100vw'} name="app1" height={'100vh'} url={'./app1.html'}></Wujie>)
 }

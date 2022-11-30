@@ -34,15 +34,15 @@ const config = {
             },
             {
                 test: /\.css?$/,
-                use: ['css-loader'],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.styl(us)?$/,
-                use: ['css-loader', 'stylus-lader'],
+                use: ['style-loader', 'css-loader', 'stylus-lader'],
             },
             {
                 test: /\.less?$/,
-                use: ['css-loader', 'less-lader'],
+                use: ['style-loader', 'css-loader', 'less-lader'],
             },
             {
                 test: /\.(woff2?|eot|tff|otf)(\?.*)$/,
