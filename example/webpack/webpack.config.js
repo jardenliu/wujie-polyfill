@@ -1,57 +1,54 @@
-const { resolve } = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const { resolve } = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 /** @type {import('webpack').Configuration} */
 const config = {
     cache: {
-        type: "filesystem",
+        type: 'filesystem',
         buildDependencies: {
-            config: [
-                resolve(__dirname, "./webpack.config.js"),
-                resolve(__dirname, "../../pnpm-lock.yaml"),
-                resolve(__dirname, "./package.json"),
-            ],
+            config: [resolve(__dirname, './webpack.config.js'), resolve(__dirname, '../../pnpm-lock.yaml'), resolve(__dirname, './package.json')],
         },
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
-        modules: [resolve(__dirname, 'src'), 'node_modules']
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+        modules: [resolve(__dirname, 'src'), 'node_modules'],
     },
     entry: {
-        main: ["./src/main.tsx"],
+        main: ['./src/main.tsx'],
+        app1: ['./src/app1.tsx'],
     },
     output: {
-        path: resolve("./dist"),
+        path: resolve('./dist'),
     },
     module: {
         rules: [
             {
                 test: /\.(j|t)sx?$/,
-                loader: "esbuild-loader",
+                loader: 'esbuild-loader',
                 options: {
                     loader: 'tsx',
                     target: 'es2015',
-                }
+                },
             },
             {
                 test: /\.css?$/,
-                use: ["css-loader"],
+                use: ['css-loader'],
             },
             {
                 test: /\.styl(us)?$/,
-                use: ["css-loader", "stylus-lader"],
+                use: ['css-loader', 'stylus-lader'],
             },
             {
                 test: /\.less?$/,
-                use: ["css-loader", "less-lader"],
+                use: ['css-loader', 'less-lader'],
             },
             {
                 test: /\.(woff2?|eot|tff|otf)(\?.*)$/,
-                type: "asset",
+                type: 'asset',
                 generator: {
-                    filename: "font/[name].[hash7].[ext]",
+                    filename: 'font/[name].[hash7].[ext]',
                 },
                 parser: {
                     dataUrlCondition: {
@@ -61,26 +58,49 @@ const config = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)$/,
-                type: "asset",
+                type: 'asset',
                 generator: {
-                    filename: "img/[name].[hash7].[ext]",
+                    filename: 'img/[name].[hash7].[ext]',
                 },
                 parser: {
                     dataUrlCondition: {
                         maxSize: 20 * 1024,
                     },
                 },
-            },
+            }
         ],
     },
-    plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin({
-        template: 'index.html',
-        filename: 'index.html'
-    })],
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            filename: 'index.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: false,
+            },
+            hash: true,
+            chunks: ['main'],
+        }),
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            filename: 'app1.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: false,
+            },
+            hash: true,
+            chunks: ['app1'],
+        })
+    ],
     optimization: {
         minimize: true,
         minimizer: [new TerserPlugin()],
     },
-};
+}
 
-module.exports = config;
+module.exports = config

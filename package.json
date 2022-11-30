@@ -11,6 +11,7 @@
   "author": "jardenliu",
   "license": "MIT",
   "devDependencies": {
+    "@jardenliu/eslint-config": "^1.0.0",
     "@rollup/plugin-typescript": "^9.0.2",
     "@types/jest": "^29.2.3",
     "@types/node": "^18.11.9",
