@@ -1,10 +1,10 @@
 {
-  "name": "wujie-polyfill",
+  "name": "wujie-polyfill-main",
   "version": "1.0.0",
   "description": "极致的微前端框架的polyfill",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c ./rollup.config.ts --configPlugin typescript",
+    "dev": "pnpm --parallel --filter wujie-polyfill  --filter *wujie-example dev --open",
     "test": "jest"
   },
   "keywords": [],
@@ -17,7 +17,6 @@
     "@types/jest": "^29.2.3",
     "@types/jest-environment-puppeteer": "^5.0.3",
     "@types/node": "^18.11.9",
-    "@types/puppeteer": "^7.0.4",
     "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",
     "jest-environment-node": "^29.3.1",

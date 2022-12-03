@@ -1,0 +1,21 @@
+{
+    "name": "wujie-polyfill",
+    "version": "1.0.0",
+    "description": "极致的微前端框架的polyfill",
+    "main": "dist/index.js",
+    "scripts": {
+      "dev": "rollup -c ./rollup.config.ts --configPlugin typescript --watch",
+      "build": "rollup -c ./rollup.config.ts --configPlugin typescript"
+    },
+    "keywords": [],
+    "author": "jardenliu",
+    "license": "MIT",
+    "devDependencies": {
+      "@rollup/plugin-typescript": "^9.0.2",
+      "@types/node": "^18.11.9",
+      "rollup": "^3.5.0",
+      "tslib": "^2.4.1",
+      "typescript": "^4.9.3"
+    }
+  }
+  
