@@ -1,5 +1,5 @@
 {
-  "name": "wujie-polyfill-main",
+  "name": "wujie-polyfill-repos",
   "version": "1.0.0",
   "description": "极致的微前端框架的polyfill",
   "main": "index.js",
