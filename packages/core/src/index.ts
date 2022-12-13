@@ -1,1 +1,1 @@
-export default 'wujie-polyfill'
+export * from './locationSync/index'
