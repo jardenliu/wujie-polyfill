@@ -46,6 +46,55 @@ importers:
       tslib: 2.4.1
       typescript: 4.9.3
 
+  examples/locationSync:
+    specifiers:
+      '@types/node': ^18.11.9
+      clean-webpack-plugin: ^4.0.0
+      copy-webpack-plugin: ^11.0.0
+      css-loader: ^6.7.2
+      esbuild-loader: ^2.20.0
+      html-webpack-plugin: ^5.5.0
+      less: ^4.1.3
+      less-loader: ^11.1.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      style-loader: ^3.3.1
+      stylus: ^0.59.0
+      stylus-loader: ^7.1.0
+      terser-webpack-plugin: ^5.3.6
+      ts-loader: ^9.4.1
+      tslib: ^2.4.1
+      typescript: ^4.9.3
+      webpack: ^5.75.0
+      webpack-cli: ^5.0.0
+      webpack-dev-server: ^4.11.1
+      wujie-polyfill: workspace:^1.0.0
+      wujie-react: ^1.0.1
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      stylus: 0.59.0
+      stylus-loader: 7.1.0_577zv5myo6oqbmxnic7hzxwylm
+    devDependencies:
+      '@types/node': 18.11.9
+      clean-webpack-plugin: 4.0.0_webpack@5.75.0
+      copy-webpack-plugin: 11.0.0_webpack@5.75.0
+      css-loader: 6.7.2_webpack@5.75.0
+      esbuild-loader: 2.20.0_webpack@5.75.0
+      html-webpack-plugin: 5.5.0_webpack@5.75.0
+      less: 4.1.3
+      less-loader: 11.1.0_less@4.1.3+webpack@5.75.0
+      style-loader: 3.3.1_webpack@5.75.0
+      terser-webpack-plugin: 5.3.6_webpack@5.75.0
+      ts-loader: 9.4.1_vfotqvx6lgcbf3upbs6hgaza4q
+      tslib: 2.4.1
+      typescript: 4.9.3
+      webpack: 5.75.0_webpack-cli@5.0.0
+      webpack-cli: 5.0.0_uaydpeuxkjjcxdbyfgk36cjdxi
+      webpack-dev-server: 4.11.1_5mhpyft47fxnqdave7meqiud7i
+      wujie-polyfill: link:../../packages/core
+      wujie-react: 1.0.1_react@18.2.0
+
   examples/webpack:
     specifiers:
       '@types/node': ^18.11.9
