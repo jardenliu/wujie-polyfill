@@ -23,7 +23,7 @@ const config = {
         path: resolve('./dist'),
     },
     devServer: {
-        port: 8800,
+        port: 8801,
     },
     module: {
         rules: [
