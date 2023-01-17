@@ -58,6 +58,7 @@ importers:
       less-loader: ^11.1.0
       react: ^18.2.0
       react-dom: ^18.2.0
+      react-router: ^6.6.0
       style-loader: ^3.3.1
       stylus: ^0.59.0
       stylus-loader: ^7.1.0
@@ -73,6 +74,7 @@ importers:
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-router: 6.6.0_react@18.2.0
       stylus: 0.59.0
       stylus-loader: 7.1.0_577zv5myo6oqbmxnic7hzxwylm
     devDependencies:
@@ -1300,6 +1302,11 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+
+  /@remix-run/router/1.2.0:
+    resolution: {integrity: sha512-GO82KYYTWPRCgdNtnheaZG3LcViUlxRFlHM7ykh7N+ufoXi6PVIHoP+9RUG/vuzl2hr9i/h6EA1Eq+2HpqJ0gQ==}
+    engines: {node: '>=14'}
+    dev: false
 
   /@rollup/plugin-typescript/9.0.2_3qldpvhx2vwhgdtnpkk4u5tuly:
     resolution: {integrity: sha512-/sS93vmHUMjzDUsl5scNQr1mUlNE1QjBBvOhmRwJCH8k2RRhDIm3c977B3wdu3t3Ap17W6dDeXP3hj1P1Un1bA==}
@@ -5897,6 +5904,16 @@ packages:
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
+
+  /react-router/6.6.0_react@18.2.0:
+    resolution: {integrity: sha512-+VPfCIaFbkW7BAiB/2oeprxKAt1KLbl+zXZ10CXOYezKWgBmTKyh8XjI53eLqY5kd7uY+V4rh3UW44FclwUU+Q==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.2.0
+      react: 18.2.0
+    dev: false
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
