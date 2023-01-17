@@ -9,6 +9,9 @@
     "dev": "rollup -c ./rollup.config.ts --configPlugin typescript --watch",
     "build": "rollup -c ./rollup.config.ts --configPlugin typescript"
   },
+  "files": [
+    "dist/*"
+  ],
   "keywords": [],
   "author": "jardenliu",
   "license": "MIT",

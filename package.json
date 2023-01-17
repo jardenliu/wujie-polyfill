@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --parallel --filter wujie-polyfill  --filter *wujie-example dev --open",
+    "build": "pnpm --filter wujie-polyfill build",
     "test": "jest",
     "prepare": "husky install"
   },
