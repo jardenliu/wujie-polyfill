@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Wujie from 'wujie-react'
-import { LocationSyncPlugin } from 'wujie-polyfill'
+import { EventTargetPlugin } from 'wujie-polyfill'
+console.log('EventTargetPlugin :', EventTargetPlugin)
 
 export default function App () {
-    return (<Wujie width={'100vw'} name="app1" height={'100vh'} url={'./app1.html'} plugins={[LocationSyncPlugin({})]}></Wujie>)
+    //
+    return (<Wujie width={'100vw'} name="app1" height={'100vh'} url={'./app1.html'} plugins={[EventTargetPlugin()]}></Wujie>)
 }

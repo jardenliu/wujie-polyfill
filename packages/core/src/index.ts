@@ -1,1 +1,2 @@
-export * from './locationSync/index'
+export * from './locationSync'
+export * from './eventTarget'
