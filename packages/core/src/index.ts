@@ -1,2 +1,2 @@
-export * from './locationSync'
-export * from './eventTarget'
+export * from './plugins/locationSync'
+export * from './plugins/eventTarget'
