@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Wujie from 'wujie-react'
-import { InstanceofPlugin } from 'wujie-polyfill'
-console.log('InstanceofPlugin :', InstanceofPlugin)
+import { WindowMessagePlugin } from 'wujie-polyfill'
+console.log('WindowMessagePlugin :', WindowMessagePlugin)
 
 export default function App () {
     //
-    return (<Wujie width={'100vw'} name="app1" height={'100vh'} url={'./app1.html'} plugins={[InstanceofPlugin()]}></Wujie>)
+    return (<Wujie width={'100vw'} name="app1" height={'100vh'} url={'./app1.html'} plugins={[WindowMessagePlugin()]}></Wujie>)
 }
