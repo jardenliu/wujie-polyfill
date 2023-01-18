@@ -1,4 +1,4 @@
-import { DOM_EVENTS } from '../../constants/event'
+import { DOM_EVENTS } from '../../constants/base'
 import { simpleJsBeforeLoader } from '../../utils/base'
 
 const polyfillEventPath = () => {

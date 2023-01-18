@@ -149,7 +149,9 @@ importers:
   packages/core:
     specifiers:
       '@types/node': ^18.11.9
+      '@types/ramda': ^0.28.21
       esbuild: ^0.16.4
+      ramda: ^0.28.0
       rollup: ^3.5.0
       rollup-plugin-cleaner: ^1.0.0
       rollup-plugin-dts: ^5.0.0
@@ -159,7 +161,9 @@ importers:
       wujie: ^1.0.3
     devDependencies:
       '@types/node': 18.11.9
+      '@types/ramda': 0.28.21
       esbuild: 0.16.4
+      ramda: 0.28.0
       rollup: 3.5.0
       rollup-plugin-cleaner: 1.0.0_rollup@3.5.0
       rollup-plugin-dts: 5.0.0_thigodkhmbmbgju2inwjpgoskq
@@ -1593,6 +1597,12 @@ packages:
 
   /@types/qs/6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
+
+  /@types/ramda/0.28.21:
+    resolution: {integrity: sha512-yim1qtioaA304Px6eZ72WvE3D41+Ay696/VpSZ54VcY8DUZ6BCDbkE/Zvc0iudK8aXXXhEWV4opoKnlphxyRQw==}
+    dependencies:
+      ts-toolbelt: 6.15.5
+    dev: true
 
   /@types/range-parser/1.2.4:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
@@ -5867,6 +5877,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /ramda/0.28.0:
+    resolution: {integrity: sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==}
+    dev: true
+
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
@@ -6783,6 +6797,10 @@ packages:
       typescript: 4.9.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+    dev: true
+
+  /ts-toolbelt/6.15.5:
+    resolution: {integrity: sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==}
     dev: true
 
   /tslib/1.14.1:

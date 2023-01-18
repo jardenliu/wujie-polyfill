@@ -17,7 +17,9 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.11.9",
+    "@types/ramda": "^0.28.21",
     "esbuild": "^0.16.4",
+    "ramda": "^0.28.0",
     "rollup": "^3.5.0",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-dts": "^5.0.0",
