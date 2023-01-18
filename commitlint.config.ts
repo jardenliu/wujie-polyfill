@@ -19,7 +19,7 @@ const checkEmoji = (header) => {
     header = `${header}`
     if (!checkSubject(header)) return false
     const realSubject = header.split(':')[1].trim()
-    const code = realSubject[0]
+    const code = realSubject
     return code.match(emojiReg)
 }
 export default {
