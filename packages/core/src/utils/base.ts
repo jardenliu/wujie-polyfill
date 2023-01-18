@@ -10,3 +10,5 @@ export const simpleJsBeforeLoader = (callback: AppWindowCallback):plugin => {
         ],
     }
 }
+
+export const isFunc = (fn: any) => typeof fn === 'function'
