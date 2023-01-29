@@ -5,3 +5,6 @@ dist
 # Log files
 .pnpm-debug.log*
 coverage
+
+# cache files
+cache
