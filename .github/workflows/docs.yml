@@ -1,0 +1,46 @@
+name: Deploy Docs Site
+
+on:
+    push:
+        paths:
+            - "docs/**.*"
+
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Docs Repo
+              uses: actions/checkout@v3
+              with:
+                  repository: "wujie-polyfill/doc"
+                  token: ${{secrets.DOCS_TOKEN}}
+                  path: "doc"
+
+            - name: Checkout Source Repo
+              uses: actions/checkout@v3
+              with:
+                  path: "wujie-polyfill"
+
+            - name: Use Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - name: Install deps
+              run: cd wujie-polyfill && npx pnpm install
+            - name: Set git config
+              run: git config --global user.email "jarden@qq.com" && git config --global user.name "wujie-polyfill"
+
+            - name: Build Docs File
+              run: cd wujie-polyfill && npx pnpm docs:build
+
+            - name: Clean doc files
+              run: cd doc/ && find * | grep -v .git | xargs rm -rf
+
+            - name: Copy files
+              run: cp -rf wujie-polyfill/docs/.vitepress/dist/** ./doc/
+
+            - name: push commit
+              run: 'cd ./doc && git add . && git commit -m "feat: 📚 update docs" &&  git push -f --repo=https://${{secrets.DOCS_TOKEN}}@github.com/wujie-polyfill/doc.git'

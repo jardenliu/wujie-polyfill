@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-const base = process.env.NODE_ENV === 'production' ? '/' : ''
+const base = process.env.NODE_ENV === 'production' ? '/doc/' : ''
 
 export default defineConfig({
     title: '无界 Polyfill',
