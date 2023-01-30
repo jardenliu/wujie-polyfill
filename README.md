@@ -3,6 +3,7 @@
 
 ## 插件列表
 - [ ] LocationSyncPlugin
+- [x] LocationReloadPlugin
 - [x] EventTargetPlugin
 - [x] WindowGetterPlugin
 - [x] WindowMessagePlugin
