@@ -16,8 +16,8 @@ hero:
       text: 快速开始
       link: /
     - theme: alt
-      text: 在线体验
-      link: /
+      text: 无界文档
+      link: https://wujie-micro.github.io/doc/
     # - theme: alt
     #   text: React示例
     #   link: https://wujie-micro.github.io/demo-main-react/
