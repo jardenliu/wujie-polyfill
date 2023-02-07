@@ -41,7 +41,11 @@ export default [
             cleaner({
                 targets: [OUTPUT_DIR],
             }),
-            esbuild()
+            esbuild({
+                optimizeDeps: {
+                    include: ['ramda'],
+                },
+            })
         ),
         output: getOutputs(['es', 'cjs']),
     },
