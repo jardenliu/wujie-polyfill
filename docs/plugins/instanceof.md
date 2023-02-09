@@ -11,6 +11,8 @@ sidebarDepth: 2
 
 例如内部的 iframe DOM元素移动到外部WebComponents后，我们触发一个鼠标事件，但此时在子应用中执行 `event instanceof MouseEvent` 为 false。因为鼠标事件 MouseEvent 是从主应用触发的，所以上面语句中的 `MouseEvent` 为 子应用 window.MouseEvent 而不是主应用的 parentWindow.MouseEvent，最终导致判断异常。
 
+参考 [wujie#256](https://github.com/Tencent/wujie/issues/256)
+
 ## 使用
 
 ```tsx
