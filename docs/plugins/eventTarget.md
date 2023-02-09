@@ -1,5 +1,61 @@
 ---
-sidebarDepth: 2
+sidebarDepth: 3
 ---
 
 # EventTargetPlugin
+
+插件修复了wujie框架下UI事件由子应用传递时，target会指向到`WUJIE-APP`标签问题。
+
+## 特性
+
+- 修正了 target 指向
+- 修正了异步获取的 target 指向
+- 修复了 chrome 109+版本 event.path 为空
+
+## 使用
+
+```tsx
+import { startApp } from 'wujie'
+import { EventTargetPlugin } from "wujie-polyfill";
+
+// 无框架
+setupApp({
+    name: '唯一id',
+    url: '子应用地址',
+    exec: true,
+    el: '容器',
+    sync: true
+    plugins: [EventTargetPlugin()]
+})
+
+// vue
+<WujieVue
+  width="100%"
+  height="100%"
+  name="xxx"
+  :url="xxx"
+  :plugins=“[EventTargetPlugin()]”
+></WujieVue>
+
+// react
+<WujieReact
+  width="100%"
+  height="100%"
+  name="xxx"
+  url="{xxx}"
+  plugins="{[EventTargetPlugin()]}"
+></WujieReact>
+
+```
+
+
+
+## 类型定义
+
+```ts
+declare const EventTargetPlugin: () => wujie.plugin;
+```
+
+## 配置
+--
+
