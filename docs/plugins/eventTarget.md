@@ -4,7 +4,10 @@ sidebarDepth: 3
 
 # EventTargetPlugin
 
-插件修复了wujie框架下UI事件由子应用传递时，target会指向到`WUJIE-APP`标签问题。 问题原因分析详见[wujie常见问题#5](https://wujie-micro.github.io/doc/question/#_5%E3%80%81%E5%AD%90%E5%BA%94%E7%94%A8%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86%E4%BA%8B%E4%BB%B6%E6%97%B6%EF%BC%8Ce-target-%E5%8F%98%E6%88%90%E4%BA%86-wujie-app)
+插件修复了wujie框架下UI事件由子应用传递时，target会指向到`WUJIE-APP`标签问题。 
+
+## 问题分析
+[wujie常见问题#5](https://wujie-micro.github.io/doc/question/#_5%E3%80%81%E5%AD%90%E5%BA%94%E7%94%A8%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86%E4%BA%8B%E4%BB%B6%E6%97%B6%EF%BC%8Ce-target-%E5%8F%98%E6%88%90%E4%BA%86-wujie-app)
 
 ## 特性
 
