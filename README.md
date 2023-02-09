@@ -56,7 +56,7 @@ setupApp({
   height="100%"
   name="xxx"
   url="{xxx}"
-  plugin="{[LocationReloadPlugin()]}"
+  plugins="{[LocationReloadPlugin()]}"
 ></WujieReact>
 
 ```
