@@ -1,7 +1,7 @@
 {
     "name": "wujie-polyfill-repos",
     "version": "1.0.0",
-    "description": "极致的微前端框架的polyfill",
+    "description": "微前端框架的polyfill",
     "main": "index.js",
     "scripts": {
         "dev": "pnpm --parallel --filter wujie-polyfill  --filter *wujie-example dev --open",
