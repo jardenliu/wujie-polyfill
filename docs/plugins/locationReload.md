@@ -7,6 +7,8 @@ sidebarDepth: 3
 
 ::: warning 提示
 LocationReloadPlugin 不适用与ESM模式(vite)下, vite 生产构建可以用 ***[@vitejs/plugin-legacy](https://www.npmjs.com/package/@vitejs/plugin-legacy)*** 进行转换。
+
+如果希望在ESM模式下进行reload， 可以不使用该插件，子应用通过 `parent.location.reload()` 进行实现更为直接。
 ::: 
 
 ## 使用
