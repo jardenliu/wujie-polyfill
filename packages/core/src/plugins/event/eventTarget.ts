@@ -44,19 +44,26 @@ const patchEventTarget = () => {
         return path[0]
     }
 
+    function targetGet () {
+        // @ts-ignore
+        const that = this
+        if (that.composed && that.composedPath() && that.composedPath()[0]) {
+            return getTargetFormPath(that.composedPath(), that.type)
+        }
+
+        if (that.path && that.path[0]) {
+            return getTargetFormPath(that.path, that.type)
+        }
+
+        return that.__WUJIE_POLYFILL_TARGET__
+    }
+
     Object.defineProperty(Event.prototype, 'target', {
-        get () {
+        get: targetGet,
+    })
 
-            if (this.composed && this.composedPath() && this.composedPath()[0]) {
-                return getTargetFormPath(this.composedPath(), this.type)
-            }
-
-            if (this.path && this.path[0]) {
-                return getTargetFormPath(this.path, this.type)
-            }
-
-            return this.__WUJIE_POLYFILL_TARGET__
-        },
+    Object.defineProperty(Event.prototype, 'srcElement', {
+        get: targetGet,
     })
 
 }
