@@ -1,4 +1,4 @@
-// import { DOM_EVENTS } from '../../constants/base'
+import { DOM_EVENTS } from '../../constants/base'
 import { simpleJsBeforeLoader } from '../../utils/base'
 
 const polyfillEventPath = (appWindow) => {
@@ -55,6 +55,46 @@ const polyfillEventPath = (appWindow) => {
         }
         return rawRemoveEventListener.apply(this, args)
     }
+
+    function injectNativeOnPath (target: any) {
+        const descs = appWindow.Object.getOwnPropertyDescriptors(target)
+
+        Object.keys(DOM_EVENTS).forEach((eventName) => {
+            const events: string[] = DOM_EVENTS[eventName].split(' ').filter(Boolean)
+            events.forEach((event) => {
+                const eventName = `on${event.toLowerCase()}`
+                if (descs[eventName]) {
+                    const desc = descs[eventName]
+                    appWindow.Object.defineProperty(target, eventName, {
+                        ...desc,
+                        get () {
+                            return this[`_${eventName}`]
+                        },
+                        set (val) {
+                            if (this[`_${eventName}`]) {
+                                this.removeEventListener(event, val)
+                            }
+
+                            this[`_${eventName}`] = val
+
+                            if (val) {
+                                this.addEventListener(event, val)
+                            }
+
+                            return void 0
+                        },
+                    })
+
+                }
+
+            })
+
+        })
+    }
+
+    injectNativeOnPath(appWindow.HTMLElement.prototype)
+    // injectNativeOnPath(appWindow)
+
 }
 
 const patchEventTarget = (appWindow) => {
