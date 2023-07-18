@@ -72,7 +72,7 @@ const polyfillEventPath = (appWindow) => {
                         },
                         set (val) {
                             if (this[`_${eventName}`]) {
-                                this.removeEventListener(event, val)
+                                this.removeEventListener(event, this[`_${eventName}`])
                             }
 
                             this[`_${eventName}`] = val
