@@ -15,7 +15,7 @@ export const WindowGetterPlugin = (config: WindowGetterPluginOptions = {}) => {
                 }
             } else {
                 handler[property] = function (target, p, receiver) {
-                    if (p.match(/^window$|^self$/)) return appWindow.__WUJIE.proxy
+                    if (p?.match?.(/^window$|^self$/)) return appWindow.__WUJIE.proxy
                     return Reflect.get(rawWindowProxy, p, receiver)
                 }
             }
