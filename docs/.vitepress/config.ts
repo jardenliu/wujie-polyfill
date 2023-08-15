@@ -92,8 +92,8 @@ export default defineConfig({
                             link: '/plugins/windowMessage',
                         },
                         {
-                            text: 'DocFullScrollPlugin',
-                            link: '/plugins/docFullScroll',
+                            text: 'DocFullscreenPlugin',
+                            link: '/plugins/docFullscreen',
                         },
                         {
                             text: 'InstanceofPlugin',

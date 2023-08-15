@@ -1,1 +1,1 @@
-export * from './docFullScreen'
+export * from './docFullscreen'

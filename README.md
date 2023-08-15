@@ -17,7 +17,7 @@
 - [x] EventTargetPlugin （事件目标插件）
 - [x] WindowGetterPlugin （window获取插件）
 - [x] WindowMessagePlugin （window通信插件）
-- [x] DocFullScrollPlugin （全屏插件）
+- [x] DocFullscreenPlugin （全屏插件）
 - [x] InstanceofPlugin （原型链判定插件）
 
 ## 使用

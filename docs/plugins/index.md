@@ -10,5 +10,5 @@ collapsable: false
 - [EventTargetPlugin](./eventTarget.md)
 - [WindowGetterPlugin](./windowGetter.md)
 - [WindowMessagePlugin](./windowMessage.md)
-- [DocFullScrollPlugin](./docFullScroll.md)
+- [DocFullscreenPlugin](./docFullscreen.md)
 - [InstanceofPlugin](./instanceof.md)

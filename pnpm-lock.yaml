@@ -291,8 +291,8 @@ importers:
         specifier: ^4.9.3
         version: 4.9.3
       wujie:
-        specifier: ^1.0.3
-        version: 1.0.3
+        specifier: ^1.0.18
+        version: 1.0.18
 
 packages:
 
@@ -6445,6 +6445,7 @@ packages:
 
   /prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -8007,8 +8008,8 @@ packages:
       '@babel/runtime': 7.20.6
     dev: true
 
-  /wujie@1.0.3:
-    resolution: {integrity: sha512-ZJITN4RpxoOZ8T4F0RCkVbBSBsFAXvlO8bJHsHpyWgfrvchQvWzKV/5Mlf5Q7E//5RbYtE5UcdNjdIFAIbBF7Q==}
+  /wujie@1.0.18:
+    resolution: {integrity: sha512-5/x2TRgJ9+6nHcHv7rmBWBKm3W49uDBOc1rzrQHxKPUCRscoHR8OQd1MCcoKDv1687CHNUTkODMyCIDktRl2ag==}
     dependencies:
       '@babel/runtime': 7.20.6
     dev: true

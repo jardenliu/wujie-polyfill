@@ -2,7 +2,7 @@
 sidebarDepth: 3
 ---
 
-# DocFullScrollPlugin
+# DocFullscreenPlugin
 
 插件兼容了 `moz` 、`webkit` 、`ms` 等前缀的全屏对象，修复了子应用无法调用全屏的问题。
 
@@ -18,7 +18,7 @@ sidebarDepth: 3
 
 ```tsx
 import { startApp } from 'wujie'
-import { DocFullScrollPlugin } from "wujie-polyfill";
+import { DocFullscreenPlugin } from "wujie-polyfill";
 
 // 无框架
 setupApp({
@@ -27,7 +27,7 @@ setupApp({
     exec: true,
     el: '容器',
     sync: true
-    plugins: [DocFullScrollPlugin()]
+    plugins: [DocFullscreenPlugin()]
 })
 
 // vue
@@ -36,7 +36,7 @@ setupApp({
   height="100%"
   name="xxx"
   :url="xxx"
-  :plugins=“[DocFullScrollPlugin()]”
+  :plugins=“[DocFullscreenPlugin()]”
 ></WujieVue>
 
 // react
@@ -45,7 +45,7 @@ setupApp({
   height="100%"
   name="xxx"
   url="{xxx}"
-  plugins="{[DocFullScrollPlugin()]}"
+  plugins="{[DocFullscreenPlugin()]}"
 ></WujieReact>
 
 ```
@@ -55,7 +55,7 @@ setupApp({
 ## 类型定义
 
 ```ts
-declare const DocFullScrollPlugin: () => wujie.plugin;
+declare const DocFullscreenPlugin: () => wujie.plugin;
 ```
 
 ## 配置

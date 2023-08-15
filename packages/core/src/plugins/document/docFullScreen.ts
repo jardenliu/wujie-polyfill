@@ -1,6 +1,6 @@
 import { isFunc, simpleJsBeforeLoader } from '../../utils/base'
 
-export const DocFullScrollPlugin = () => {
+export const DocFullscreenPlugin = () => {
     return simpleJsBeforeLoader((appWindow) => {
         const requestFuncList = ['requestFullscreen', 'mozRequestFullScreen', 'webkitRequestFullscreen', 'msRequestFullscreen']
         // wujie已经代理了'exitFullscreen'
@@ -57,4 +57,10 @@ export const DocFullScrollPlugin = () => {
         })
 
     })
+}
+
+
+export const DocFullScrollPlugin = () => {
+    console.warn('[wujie-polyfill]: DocFullScrollPlugin 将被废弃，请使用 DocFullscreenPlugin进行替代')
+    return DocFullscreenPlugin() // 向下兼容旧版本 拼写错误 
 }
