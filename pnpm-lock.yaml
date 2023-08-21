@@ -148,8 +148,8 @@ importers:
         specifier: workspace:^1.0.0
         version: link:../../packages/core
       wujie-react:
-        specifier: ^1.0.1
-        version: 1.0.1(react@18.2.0)
+        specifier: ^1.0.18
+        version: 1.0.18(react@18.2.0)
 
   examples/vite:
     dependencies:
@@ -185,8 +185,8 @@ importers:
         specifier: workspace:^1.0.0
         version: link:../../packages/core
       wujie-react:
-        specifier: ^1.0.1
-        version: 1.0.1(react@18.2.0)
+        specifier: ^1.0.18
+        version: 1.0.18(react@18.2.0)
 
   examples/webpack:
     dependencies:
@@ -255,8 +255,8 @@ importers:
         specifier: workspace:^1.0.0
         version: link:../../packages/core
       wujie-react:
-        specifier: ^1.0.1
-        version: 1.0.1(react@18.2.0)
+        specifier: ^1.0.18
+        version: 1.0.18(react@18.2.0)
 
   packages/core:
     devDependencies:
@@ -7992,20 +7992,14 @@ packages:
       utf-8-validate:
         optional: true
 
-  /wujie-react@1.0.1(react@18.2.0):
-    resolution: {integrity: sha512-1JZA2gsX5BEYa+bs9IVmQaZQe2C6WukJqf97p52bhjse8bVl8Ls9gfC3Ox10vcAGaEU2um3/91ViaB82RXYngA==}
+  /wujie-react@1.0.18(react@18.2.0):
+    resolution: {integrity: sha512-qvbVti2+fsonTTD8VIM6WeWQ6rlzxONxG5g65Pe/lcx29spNJIIbVQyeBsFI1tr09XaDM9Ges5HagEg0DcLHWg==}
     peerDependencies:
       react: '>=16.0.0'
     dependencies:
       prop-types: 15.8.1
       react: 18.2.0
-      wujie: 1.0.1
-    dev: true
-
-  /wujie@1.0.1:
-    resolution: {integrity: sha512-pzul3z3L48IBUb6yijcAn/ecwdF00uT4ER5aOSZR5hZ46BP1UK2q+ZAa2aq9sJD9tbmQArM/YRCfCB0fkXi/iQ==}
-    dependencies:
-      '@babel/runtime': 7.20.6
+      wujie: 1.0.18
     dev: true
 
   /wujie@1.0.18:
