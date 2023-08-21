@@ -14,6 +14,7 @@
     },
     "keywords": [],
     "author": "jardenliu",
+    "homepage": "https://wujie-polyfill.github.io/doc/",
     "license": "MIT",
     "devDependencies": {
         "@commitlint/cli": "^17.3.0",
