@@ -32,6 +32,7 @@ export const InstanceofPlugin = (config: InstanceofPluginOptions = {}) => {
                     return Reflect.get(target, p, receiver)
                 },
             })
+            if (global[prop]?.prototype?.constructor) global[prop].prototype.constructor = global[prop]
         }
 
         patchList.forEach((prop) => patchInstanceof(prop, rawHasInstance))
