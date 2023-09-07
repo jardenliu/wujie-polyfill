@@ -60,3 +60,6 @@ setupApp({
 ></WujieReact>
 
 ```
+
+
+![STAR HISTORY](https://api.star-history.com/svg?repos=jardenliu/wujie-polyfill&type=Date)
