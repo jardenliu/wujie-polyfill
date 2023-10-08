@@ -114,14 +114,8 @@ const patchEventTarget = (appWindow) => {
     }
 
     const getTargetFormPath = (path: Element[], type: string) => {
-        const shadowRoots = path.filter((dom) => dom.shadowRoot)
-
-        if (shadowRoots.length > 1) { // 第一个肯定是 wujie-app
-            const idx = shadowRoots.findIndex((dom) => dom.tagName === 'WUJIE-APP')
-            return shadowRoots[idx - 1] // 取的wujie前一个shadowRoot
-
-        }
-
+        const shadowRoots = path.filter((dom) => dom.shadowRoot && dom.tagName !== 'WUJIE-APP')
+        if (shadowRoots.length > 1) return shadowRoots[shadowRoots.length - 1] // 如果有其他shadowRoot 取其他shadowRoot
         return path[0]
     }
 
