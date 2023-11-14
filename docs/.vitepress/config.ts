@@ -98,8 +98,11 @@ export default defineConfig({
                         {
                             text: 'InstanceofPlugin',
                             link: '/plugins/instanceof',
+                        },
+                        {
+                            text: 'SelectionPlugin',
+                            link: '/plugins/selection',
                         }
-
                     ],
                 }
             ],

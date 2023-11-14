@@ -59,8 +59,7 @@ export const DocFullscreenPlugin = () => {
     })
 }
 
-
 export const DocFullScrollPlugin = () => {
     console.warn('[wujie-polyfill]: DocFullScrollPlugin 将被废弃，请使用 DocFullscreenPlugin进行替代')
-    return DocFullscreenPlugin() // 向下兼容旧版本 拼写错误 
+    return DocFullscreenPlugin() // 向下兼容旧版本 拼写错误
 }

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 
 export default function App () {
+    console.log(window.getSelection().isCollapsed)
+    console.log(document.getSelection().isCollapsed)
+
     const [msg, setMsg] = useState('App1')
     const input2 = document.createElement('input')
     input2.id = 'input'
@@ -42,7 +45,7 @@ export default function App () {
 
         console.log('input :', input)
     }, 2000)
-    return (<div>
+    return (<div>12312312313
         <input></input>
     </div>)
 }

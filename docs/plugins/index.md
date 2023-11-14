@@ -12,6 +12,7 @@ collapsable: false
 - [WindowMessagePlugin](./windowMessage.md)
 - [DocFullscreenPlugin](./docFullscreen.md)
 - [InstanceofPlugin](./instanceof.md)
+- [SelectionPlugin](./selection.md)
 
 ## 定制插件
 
