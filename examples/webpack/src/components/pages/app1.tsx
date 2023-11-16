@@ -23,6 +23,8 @@ export default function App () {
             }, 1000)
         }
 
+        // location.href = 'http://www.baidu.com'
+
         // window.onmouseover = function (event) {
         //     console.log(4, event.target)
         //     setTimeout(() => {

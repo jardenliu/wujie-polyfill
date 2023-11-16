@@ -29,7 +29,7 @@
         "webpack-cli": "^5.0.0",
         "webpack-dev-server": "^4.11.1",
         "wujie-react": "^1.0.18",
-        "wujie-polyfill": "workspace:^1.0.0"
+        "wujie-polyfill": "workspace:^1.0.8"
     },
     "dependencies": {
         "react": "^18.2.0",
