@@ -7,6 +7,7 @@ collapsable: false
 `<!-- - [LocationSyncPlugin](./locationSync.md) -->`
 
 - [LocationReloadPlugin](./locationReload.md)
+- [LocationHrefPlugin](./locationHref)
 - [EventTargetPlugin](./eventTarget.md)
 - [WindowGetterPlugin](./windowGetter.md)
 - [WindowMessagePlugin](./windowMessage.md)

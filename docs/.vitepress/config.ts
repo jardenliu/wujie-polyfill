@@ -80,6 +80,10 @@ export default defineConfig({
                             link: '/plugins/locationReload',
                         },
                         {
+                            text: 'LocationHrefPlugin',
+                            link: '/plugins/locationHref',
+                        },
+                        {
                             text: 'EventTargetPlugin',
                             link: '/plugins/eventTarget',
                         },
