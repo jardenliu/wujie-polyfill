@@ -1,8 +1,25 @@
 import React, { useState } from 'react'
 
 export default function App () {
+
     console.log(window.getSelection().isCollapsed)
     console.log(document.getSelection().isCollapsed)
+
+    console.log(' window.innerHeight', window.innerHeight)
+    console.log(' window.innerWidth', window.innerWidth)
+    console.log(' window.outerWidth', window.outerWidth)
+    console.log(' window.outerHeight', window.outerHeight)
+
+    setTimeout(() => {
+        console.log(' window.innerHeight', window.innerHeight)
+        console.log(' window.innerWidth', window.innerWidth)
+        console.log(' window.outerWidth', window.outerWidth)
+        console.log(' window.outerHeight', window.outerHeight)
+    }, 3000)
+
+    window.addEventListener('resize', () => {
+        console.log(' window.innerWidth', window.innerWidth)
+    })
 
     const [msg, setMsg] = useState('App1')
     const input2 = document.createElement('input')
