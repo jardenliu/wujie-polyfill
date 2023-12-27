@@ -21,14 +21,39 @@ export const WindowSizePlugin = (config: WindowSizePluginOptions = {}) => {
             outerHeight: () => rawWindowProxy.parent.outerHeight,
         }
 
-        appWindow.__WUJIE.proxy = new Proxy(rawWindowProxy, {
-            get (target, p, receiver) {
-                if (getters[p]) {
-                    return getters[p]()
-                }
-                return Reflect.get(target, p, receiver)
-            },
-        }) as Window
+        const store: any = {}
+
+        const desc = Object.getOwnPropertyDescriptor(appWindow, 'innerHeight')
+        if (desc?.configurable) { // 优先使用兼容vite
+            Object.keys(getters).forEach((p) => {
+                Object.defineProperty(appWindow, p, {
+                    configurable: true,
+                    enumerable: true,
+                    get () {
+                        return store.hasOwnProperty(p) ? store[p] : getters[p]()
+                    },
+                    set (val) {
+                        store[p] = val
+                    },
+                })
+            })
+        } else {
+            appWindow.__WUJIE.proxy = new Proxy(rawWindowProxy, {
+                get (target, p, receiver) {
+                    if (getters[p]) {
+                        return store.hasOwnProperty(p) ? store[p] : getters[p]()
+                    }
+                    return Reflect.get(target, p, receiver)
+                },
+                set (target, p, val, receiver) {
+                    if (getters[p]) {
+                        store[p] = val
+                        return true
+                    }
+                    return Reflect.set(target, p, val, receiver)
+                },
+            }) as Window
+        }
 
     })
 }
