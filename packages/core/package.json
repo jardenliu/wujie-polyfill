@@ -1,6 +1,6 @@
 {
     "name": "wujie-polyfill",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "极致的微前端框架的polyfill",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
@@ -15,6 +15,9 @@
     "keywords": [],
     "author": "jardenliu",
     "license": "MIT",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
     "devDependencies": {
         "@types/node": "^18.11.9",
         "@types/ramda": "^0.28.21",
