@@ -113,7 +113,7 @@ const patchEventTarget = (appWindow) => {
         polyfillEventPath(appWindow)
     }
 
-    const getTargetFormPath = (path: Element[], type: string) => {
+    const getTargetFromPath = (path: Element[], type: string) => {
         const shadowRoots = path.filter((dom) => dom.shadowRoot && dom.tagName !== 'WUJIE-APP')
         if (shadowRoots.length > 1) return shadowRoots[shadowRoots.length - 1] // 如果有其他shadowRoot 取其他shadowRoot
         return path[0]
@@ -123,11 +123,11 @@ const patchEventTarget = (appWindow) => {
         // @ts-ignore
         const that = this
         if (that.composed && that.composedPath() && that.composedPath()[0]) {
-            return getTargetFormPath(that.composedPath(), that.type)
+            return getTargetFromPath(that.composedPath(), that.type)
         }
 
         if (that.path && that.path[0]) {
-            return getTargetFormPath(that.path, that.type)
+            return getTargetFromPath(that.path, that.type)
         }
 
         return that.__WUJIE_POLYFILL_TARGET__
