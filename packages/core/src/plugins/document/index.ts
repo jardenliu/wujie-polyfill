@@ -1,2 +1,2 @@
 export * from './docFullScreen'
-export * from './docElementSize'
+export * from './docElementRect'
