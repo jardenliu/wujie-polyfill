@@ -4,29 +4,35 @@
   </a>
 </p>
 
-
 # wujie-polyfill
+
 由于wujie（无界）采用的是WebComponents + iframe 来是脚本沙箱和样式隔离，该仓库用于弥补该方案的在特定的场景下的不足。
 
 ## 文档
+
 文档详见：[文档](https://wujie-polyfill.github.io/doc/)
 
 ## 插件列表
+
 - [ ] LocationSyncPlugin (地址同步插件)
-- [x] LocationReloadPlugin （页面刷新插件）
-- [x] EventTargetPlugin （事件目标插件）
-- [x] WindowGetterPlugin （window获取插件）
-- [x] WindowMessagePlugin （window通信插件）
-- [x] DocFullscreenPlugin （全屏插件）
-- [x] InstanceofPlugin （原型链判定插件）
+- [X] LocationReloadPlugin （页面刷新插件）
+- [X] EventTargetPlugin （事件目标插件）
+- [X] WindowGetterPlugin （window获取插件）
+- [X] WindowMessagePlugin （window通信插件）
+- [X] DocFullscreenPlugin （全屏插件）
+- [X] InstanceofPlugin （原型链判定插件）
+- [X] DocElementRectPlugin（代理documentElement主应用尺寸插件）
 
 ## 使用
 
 - 安装
+
 ```bash
     npm i wujie-polyfill -S
 ```
+
 - 使用
+
 ```tsx
 import { startApp } from 'wujie'
 import { LocationReloadPlugin } from "wujie-polyfill";
@@ -60,6 +66,5 @@ setupApp({
 ></WujieReact>
 
 ```
-
 
 ![STAR HISTORY](https://api.star-history.com/svg?repos=jardenliu/wujie-polyfill&type=Date)

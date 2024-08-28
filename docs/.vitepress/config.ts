@@ -100,6 +100,10 @@ export default defineConfig({
                             link: '/plugins/docFullscreen',
                         },
                         {
+                            text: 'DocElementRectPlugin',
+                            link: '/plugins/docElementRect',
+                        },
+                        {
                             text: 'InstanceofPlugin',
                             link: '/plugins/instanceof',
                         },
