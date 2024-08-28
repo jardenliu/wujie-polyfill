@@ -2,7 +2,7 @@ import { simpleJsBeforeLoader } from '../../utils/base'
 
 type DocumentElementGetters = Pick<Document['documentElement'], 'getBoundingClientRect'>
 
-export const DocumentElementRectPlugin = () => {
+export const DocElementRectPlugin = () => {
     return simpleJsBeforeLoader(appWindow => {
         const rawWindowProxy = appWindow.__WUJIE.proxy
         const documentElement: HTMLElement = rawWindowProxy.parent && rawWindowProxy.parent.document.documentElement
