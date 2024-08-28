@@ -3,18 +3,18 @@ import { simpleJsBeforeLoader } from '../../utils/base'
 type DocumentElementGetters = Pick<Document['documentElement'], 'getBoundingClientRect'>
 
 export const DocElementRectPlugin = () => {
-    return simpleJsBeforeLoader(appWindow => {
+    return simpleJsBeforeLoader((appWindow) => {
         const rawWindowProxy = appWindow.__WUJIE.proxy
-        const documentElement: HTMLElement = rawWindowProxy.parent && rawWindowProxy.parent.document.documentElement
+        const documentElement: HTMLElement = rawWindowProxy.parent?.document?.documentElement
         const propertyList: string[] = ['clientHeight', 'clientWidth', 'clientTop', 'clientLeft', 'scrollHeight', 'scrollWidth', 'scrollTop', 'scrollLeft', 'offsetHeight', 'offsetWidth', 'offsetTop', 'offsetLeft']
         const getters: DocumentElementGetters = {
-            getBoundingClientRect: () => documentElement.getBoundingClientRect()
+            getBoundingClientRect: () => documentElement.getBoundingClientRect(),
         }
         // 获取子应用的document的根元素
-        const originalRootElement = appWindow.document.documentElement
+        const rawDocElement = appWindow.document.documentElement
         // 创建一个代理来拦截对documentElement的所有操作
-        const proxy = new Proxy(originalRootElement, {
-            get(target, property, receiver) {
+        const proxy = new Proxy(rawDocElement, {
+            get (target, property, receiver) {
                 if (typeof property === 'string' && propertyList.includes(property)) {
                     return documentElement[property]
                 }
@@ -28,15 +28,15 @@ export const DocElementRectPlugin = () => {
                     return value.bind(target)
                 }
                 return value
-            }
+            },
         })
-        propertyList.concat(Object.keys(getters)).forEach(key => {
+        propertyList.concat(Object.keys(getters)).forEach((key) => {
             // 注意：这种做法并不推荐，因为它可能会引起不可预见的问题
-            Object.defineProperty(originalRootElement, key, {
+            Object.defineProperty(rawDocElement, key, {
                 configurable: true,
-                get() {
+                get () {
                     return Reflect.get(proxy, key)
-                }
+                },
             })
         })
     })
