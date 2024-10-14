@@ -53,7 +53,7 @@ setupApp({
   height="100%"
   name="xxx"
   :url="xxx"
-  :plugins=“[LocationReloadPlugin()]”
+  :plugins="[LocationReloadPlugin()]"
 ></WujieVue>
 
 // react
