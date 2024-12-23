@@ -29,6 +29,13 @@ export const DocElementRectPlugin = () => {
                 }
                 return value
             },
+            set(target, property, value, receiver) {
+                if (typeof property === 'string' && propertyList.includes(property)) {
+                    documentElement[property] = value // 设置到主应用的 documentElement
+                    return true
+                }
+                return Reflect.set(target, property, value)
+            },
         })
         propertyList.concat(Object.keys(getters)).forEach((key) => {
             // 注意：这种做法并不推荐，因为它可能会引起不可预见的问题
@@ -37,6 +44,9 @@ export const DocElementRectPlugin = () => {
                 get () {
                     return Reflect.get(proxy, key)
                 },
+                set(value) {
+                    Reflect.set(proxy, key, value) // 将赋值操作传递到代理
+                }
             })
         })
     })
