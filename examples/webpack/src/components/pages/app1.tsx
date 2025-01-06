@@ -26,7 +26,7 @@ export default function App () {
     input2.id = 'input'
     document.body.appendChild(input2)
     setTimeout(() => {
-        const input = document.querySelector('#input')
+        const input = document.querySelector('#input') as HTMLElement
         input.addEventListener('input', (event) => {
             setTimeout(() => {
                 console.log(1, event.target)
@@ -63,8 +63,29 @@ export default function App () {
         // } )
 
         console.log('input :', input)
+
+        const scrollBox = document.querySelector('#scrollBox') as HTMLElement
+        scrollBox.addEventListener('scroll', (event) => {
+            setTimeout(() => {
+                console.log(8, event)
+                console.log(8, event.target)
+            }, 1000)
+        })
+
     }, 2000)
+
     return (<div>12312312313
         <input></input>
+        <div id="scrollBox" style={{
+            height: '300px',
+            width: '300px',
+            overflow: 'auto',
+        }}>
+            <div style={{
+                height: '800px',
+                width: '600px',
+                backgroundColor: 'red',
+            }}>2</div>
+        </div>
     </div>)
 }
