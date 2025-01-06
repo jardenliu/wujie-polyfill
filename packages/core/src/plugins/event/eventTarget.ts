@@ -16,10 +16,8 @@ const polyfillEventPath = (appWindow) => {
     // })
 
     function setupPath (e) {
-        if (e?.composed) {
-            // @ts-ignore
-            e.path = e.composedPath()
-        }
+        // @ts-ignore
+        e.path = e.composedPath?.()
     }
 
     const rawAddEventListener = appWindow.EventTarget.prototype.addEventListener
