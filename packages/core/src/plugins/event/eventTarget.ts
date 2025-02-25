@@ -96,6 +96,10 @@ const polyfillEventPath = (appWindow) => {
 }
 
 const patchEventTarget = (appWindow) => {
+    if (!Object.getOwnPropertyDescriptor(Event.prototype, 'path')) {
+        polyfillEventPath(appWindow)
+    }
+
     // @ts-ignore
     if (Event.prototype.__WUJIE_POLYFILL_EVENT_TARGET_PATCHED__) return
     // @ts-ignore
@@ -106,10 +110,6 @@ const patchEventTarget = (appWindow) => {
     Object.defineProperty(Event.prototype, '__WUJIE_POLYFILL_TARGET__', {
         get: originEventTargetGetter,
     })
-
-    if (!Object.getOwnPropertyDescriptor(Event.prototype, 'path')) {
-        polyfillEventPath(appWindow)
-    }
 
     const getTargetFromPath = (path: Element[], type: string) => {
         const shadowRoots = path.filter((dom) => dom.shadowRoot && dom.tagName !== 'WUJIE-APP')
