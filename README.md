@@ -10,7 +10,11 @@
 
 ## 文档
 
-文档详见：[文档](https://wujie-polyfill.github.io/doc/)
+文档详见：
+
+[文档](https://wujie-polyfill.github.io/doc/) -- 官方文档
+
+[AI文档](https://zread.ai/jardenliu/wujie-polyfill) -- 由zread.ai生成，辅助食用
 
 ## 插件列表
 
